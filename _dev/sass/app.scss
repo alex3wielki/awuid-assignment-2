@@ -1,8 +1,10 @@
-$lightColor: white;
-$darkColor: black;
+$lightColor: rgb(173,169,169);
+$darkColor: #111;
 body {
     background: $darkColor;
     color: $lightColor;
+    font-family: 'Germania One', sans-serif;
+    font-size: 200%; //I was building it when my eyes were malfunctioning so it might be a bit too big.
 }
 
 // Setting the letter color in navbar to $dark
@@ -21,7 +23,7 @@ body {
     }
 }
 
-// Making the logo a circle
+// Making the logo a circle, changing the background color
 .navbar {
     background: $lightColor;
     padding-top: 0;
@@ -33,4 +35,17 @@ body {
             height: $size;
         }
     }
+
 }
+
+// Header1 border, centering and sizing
+header{
+    h1{
+        $border: 5px solid $lightColor;
+        font-size: 220%;
+        border-top: $border;
+        border-bottom: $border;
+        text-align: center;
+    }
+}
+
