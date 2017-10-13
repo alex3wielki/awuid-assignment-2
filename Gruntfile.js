@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   // 1. All configuration goes here 
   grunt.initConfig({
@@ -25,14 +25,14 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          '_dev/css/app.css': '_dev/sass/app.scss'
+          '_dev/css/app.min.css': '_dev/sass/app.scss'
         }
       }
     },
     autoprefixer: {
       dist: {
         files: {
-          'content/app-prefixed.css': '_dev/css/app.css'
+          'content/app.prefixed.min.css': '_dev/css/app.min.css'
         }
       }
     },
@@ -48,16 +48,15 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        // if needed edit to ts
-        files: ['_dev/js/*.js'],
-        tasks: ['uglify'],
+        files: ['_dev/ts/*.ts'],
+        tasks: ['typescript', 'uglify'],
         options: {
           spawn: false,
         }
       },
       css: {
         files: '_dev/sass/app.scss',
-        tasks: ['scss', 'autoprefixer']
+        tasks: ['sass', 'autoprefixer']
       }
     } //End watch
   });
@@ -70,7 +69,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-typescript');
-  
+
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
   grunt.registerTask(
     'default', [

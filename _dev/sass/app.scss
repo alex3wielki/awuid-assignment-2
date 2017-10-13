@@ -1,4 +1,36 @@
-body{
-    background: #aaa;
-    display: flex;
+$lightColor: white;
+$darkColor: black;
+body {
+    background: $darkColor;
+    color: $lightColor;
+}
+
+// Setting the letter color in navbar to $dark
+.navbar {
+    a {
+        color: $darkColor;
+    }
+    .container {
+        .navbar-nav {
+            .nav-item {
+                a {
+                    color: $darkColor;
+                }
+            }
+        }
+    }
+}
+
+// Making the logo a circle
+.navbar {
+    background: $lightColor;
+    padding-top: 0;
+    padding-bottom: 0;
+    a {
+        img {
+            $size: 10%;
+            width: $size;
+            height: $size;
+        }
+    }
 }

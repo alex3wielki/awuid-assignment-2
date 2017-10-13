@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 1</title>
+    <title>Assignment 2</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./content/app-prefixed.css">
+    <link rel="stylesheet" href="./content/app.prefixed.min.css">
 </head>
 
 <body>
-    <header>
+    <header class="container">
+        <figure class="row">
+            <img class="col-12 col-lg-4" id="logo" src="./assets/img/logo.png" alt="Witcher: The Last Wish logo">
+            <h1 class="col-12 col-lg-8 my-auto"> Witcher: The Last Wish </h1>
+        </figure>
     </header>
 
-    <nav class="navbar container-fluid navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar sticky-top container-fluid navbar-expand-lg">
+
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/logo.png" alt="Witcher: The Last Wish logo">
+            Witcher: The Last Wish
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <aside class="collapse navbar-collapse" id="navbarToggler">
+        <aside class="container collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
                     <a href="#" class="nav-link active">Home</a>
@@ -36,19 +44,25 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Deals</a>
-                        <a class="dropdown-item" href="#">Recommended</a>
-                        <a class="dropdown-item" href="#">Giveaways</a>
+                        <li>
+                            <a class="dropdown-item" href="#">Deals</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Recommended</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Giveaways</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
         </aside>
     </nav>
 
-    <main>
+    <main class="container">
     </main>
 
-    <footer>
+    <footer class="container">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
